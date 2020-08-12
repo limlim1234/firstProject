@@ -29,7 +29,7 @@ public class LogicalOperatorExample {
 		result +=30; //result = result + 30;
 		
 		result = 80;
-		boolean pass =false;
+		boolean pass=false; //boolean이니까 참거짓둘중 아무거나써도됨
 		if(result >= 80) {
 			pass = true;
 		}else {
