@@ -16,3 +16,4 @@ public class ArrayExercise07 {
 		System.out.println("max: " + maxVal);
 	}
 }
+

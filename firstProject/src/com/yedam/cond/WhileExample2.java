@@ -28,4 +28,6 @@ public class WhileExample2 {
 	} //end of main
 
 } 
-}//end of class
+//end of class
+
+

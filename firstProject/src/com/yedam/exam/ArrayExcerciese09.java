@@ -23,8 +23,8 @@ public class ArrayExcerciese09 {
 				studentNum = scanner.nextInt();
 
 			} else if (selectNo == 2) {
-				int 
-				System.out.println(scores);
+				 
+			System.out.println(scores);
 			} else if (selectNo == 3) {
 				System.out.println(scores);
 			} else if (selectNo == 4) {
@@ -37,3 +37,5 @@ public class ArrayExcerciese09 {
 		System.out.println("프로그램 종료");
 	}
 }
+
+
