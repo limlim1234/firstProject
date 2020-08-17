@@ -4,55 +4,58 @@ import java.util.Scanner;
 
 public class Address {
 	public static void main(String[] args) {
-		boolean run = true;
-		int age = 0;
-        String name = null;
-        String no = null;
-		Scanner scanner = new Scanner(System.in);
-		
-		Friend[] fary= new Friend[2];
-		while (run) {
-			
-			System.out.println("1.정보입력 2.리스트 3.이름조회 4.이름조회 후 수정 9.종료");
-			System.out.println();
-			int selectNo = scanner.nextInt();
-			
-			if (selectNo == 1) {
-				for(int f=1; f<=2; f++) {
-				System.out.println("정보입력을 하세요"); 
-				System.out.println("이름을 입력하세요");
-				name = scanner.nextLine();
-				System.out.println("나이를 입력하세요");
-				age = scanner.nextInt();scanner.nextLine();
-				System.out.println("전화번호를 입력하세요");
-				no = scanner.nextLine();
-				}
-				
-				 Friend f1=new Friend(name,age,no);
-				 fary[0]=f1;
-				
-						
+		// 1. 정보입력(이름, 나이 , 전화번호)
+		// 2.리스트
+		// (3) 이름조회
+		// (4).이름조회 후 수정
+		// 9.종료
 
-			} else if (selectNo == 2) {
-				for(int f =1; f<=2; f++) {
-					System.out.println("정보입력을 하세요"); 
-					System.out.println("이름을 입력하세요");
-					age = scanner.nextInt();
-					System.out.println("전화번호를 입력하세요");
-					no = scanner.nextLine();
-					
+		Friend[] friends = new Friend[100];
+		Scanner scn = new Scanner(System.in);
+		boolean run = true;
+		// 메뉴출력
+		while (run) {
+			System.out.println("-----------------");
+			System.out.println("1.정보입력(이름, 나이 , 전화번호) 2.리스트 9.종료");
+			System.out.println("-----------------");
+			System.out.println("선택>");
+			int selectNo = scn.nextInt();
+			scn.nextLine();
+			if (selectNo == 1) {
+				System.out.println("이름입력> ");
+				String name = scn.nextLine();
+				System.out.println("나이입력> ");
+				int age = scn.nextInt();
+				System.out.println("전화번호입력> ");
+				String phone = scn.nextLine();
+				Friend f = new Friend(name, age, phone);
+				// 한건만 입력해야함
+				for (int i = 0; i < friends.length; i++) {
+					if (friends[i] == null) {
+						friends[i] = f;
+						break; // for 반복문 탈출
+					}
+
 				}
-				System.out.println(age);
-				int num = scanner.nextInt();
-//			} else if (selectNo == 3) {
-//				System.out.println(no);
+			} else if (selectNo == 2) {
+				for (Friend frnd : friends) {
+					if (frnd != null) {
+						System.out.println(
+								"이름: " + frnd.getName() + ", 나이: " + frnd.getAge() + ", 전화번호: " + frnd.getPhone());
+					}
+				}
+
 			} else if (selectNo == 9) {
 				run = false;
+			}
+			
+			
 
 			}
-
-		}
 		System.out.println("프로그램 종료.");
-	}
+		}
+		
+	
 
-}
+} 
+// end of class

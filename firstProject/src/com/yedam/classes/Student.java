@@ -1,19 +1,21 @@
 package com.yedam.classes;
 
 public class Student {
-
-	 int studentnumber;
-	 String name;
-	 String major;
+// 필드
+	private int studNo;
+	 private String studName;
+	 private String major;
 //생성자(초기값)	
-	public Student(int x) {
-		this.studentnumber = x;
-		this.name = "";
-		this.major = "";
+	 public Student() {
+		 
+	 }
+	 public Student(int studNo) {
+		this.studNo = studNo; 
+		
 		}
 	public Student(int x, String y) {
-		this.studentnumber = x;
-		this.name = y;
+		this.studNo = x;
+		this.studName = y;
 		this.major = "";
 		}
 	public Student(int x, String y, String z) {

@@ -2,6 +2,7 @@ package com.yedam.classes;
 
 public class Person {
 // 필드
+//(default) String name;
 	String name;
 	int age;
 	//생성자
@@ -16,11 +17,11 @@ public class Person {
 	public String introduce() {
 		return "이름은 " + name + " 나이는" + age;
 	}
-	public String getName() {
+	public String getName() { //getName 필드이름 첫문자대문자 
 		return name;
 	}
 
-	public void setName(String name, int age) {
+	public void setName(String name, int age) {  
 		this.name = name;
 		this.age = age;
 	}

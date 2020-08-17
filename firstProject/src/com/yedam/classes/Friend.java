@@ -1,66 +1,89 @@
 package com.yedam.classes;
 
 public class Friend {
-
-	String name;
-	int age;
-	String num;
-
-	public Friend(String name) {
-		this.name = name;
+//필드
+	private String name;
+	private int age;
+	private String phone;
+//생성자 
+	// 생성자 오버로딩
+	public Friend(String name, int age, String phone) { //뒤에오는 매개값이 달라야함
+		
 	}
 
-	public Friend(int age) {
-		this.age = age;
-	}
 
-	public Friend(String name, int age, String num) {
-		super();
+	public void Friend1(String name, int age, String phone) {
 		this.name = name;
 		this.age = age;
-		this.num = num;
+		this.phone = phone;
+	}
+	public Friend(String n , String p) {
+		
+	}
+// 메소드
+	public String getName {
+		return name;
 	}
 
-	/**
-	 * @return the name
-	 */
+	
+	public String getPhone() {
+		return phone;
+	}
+
+	
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	
+	public String getGetName() {
+		return getName;
+	}
+
+	public void setGetName(String getName) {
+		this.getName = getName;
+	}
+
+	
+	public void getString() {
+		return String;
+	}
+
+	
+	public void setString() {
+		String =
+	}
+	public void String setName {
+		this.setName = 
+	}
+
+	
 	public String getName() {
 		return name;
 	}
 
-	/**
-	 * @param name the name to set
-	 */
+	
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	/**
-	 * @return the age
-	 */
 	public int getAge() {
 		return age;
 	}
 
-	/**
-	 * @param age the age to set
-	 */
+	
 	public void setAge(int age) {
 		this.age = age;
 	}
 
-	/**
-	 * @return the num
-	 */
-	public String getNum() {
-		return num;
+	
+	public String getNum(String phone) {
+		return phone;
 	}
 
-	/**
-	 * @param num the num to set
-	 */
-	public void setNum(String num) {
-		this.num = num;
+	
+	public void setNum(String phone) {
+		this.phone = phone;
 	}
 	
 
