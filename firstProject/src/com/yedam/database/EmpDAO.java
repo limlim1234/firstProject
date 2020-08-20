@@ -55,11 +55,11 @@ public class EmpDAO {
 	}
 
 // 삭제
-	public void removeEmp(Employee emp) {
+	public void removeEmp(Employee empId) {
 		
 		Connection conn = DBConnection.getConnection();
 
-		String sql = "delete from emp_temp where employee_id = " + emp.getEmployeeId();
+		String sql = "delete from emp_temp where employee_id = " + empId.getEmployeeId();
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			int r = pstmt.executeUpdate();
@@ -70,9 +70,10 @@ public class EmpDAO {
 		}
 		
 //수정		
-		 public void updateEmp(Employee eId) {
+		 public void updateEmp(Employee emp) {
       	   Connection conn = DBConnection.getConnection();
-      	   String sql = "update from emp_temp where employee_id = " + eId.getEmployeeId();
+      	   String sql = "update from emp_temp where employee_id = " + emp.getEmployeeId();
+      	                
      		try {
   			PreparedStatement pstmt = conn.prepareStatement(sql);
   			int r = pstmt.executeUpdate();
