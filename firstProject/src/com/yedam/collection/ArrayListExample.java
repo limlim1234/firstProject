@@ -3,6 +3,8 @@ package com.yedam.collection;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.yedam.test.Board;
+
 public class ArrayListExample {
 
 	public static void main(String[] args) {
