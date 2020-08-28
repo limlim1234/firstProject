@@ -1,49 +1,42 @@
 package com.yedam.test;
 
-public class Student  {
-	
-	private String Name;
-	private int Age;
-	private int Grade;
-	
+//학생 
+//학생이름,나이,성적 정보
+//:getter, setter
+public class Student {
+	String name;
+	int age;
+	int grade;
 
 	public Student(String name, int age, int grade) {
 		super();
-		this.Name = name;
-		this.Age = age;
-		this.Grade = grade;
+		this.name = name;
+		this.age = age;
+		this.grade = grade;
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		this.Name = name;
+		this.name = name;
 	}
-	
+
 	public int getAge() {
-		return Age;
+		return age;
 	}
 
 	public void setAge(int age) {
-		this.Age = age;
-	}
-	
-	public int getGrade() {
-		return Grade;
-	}
-	
-	public void setGrade(int grade) {
-		this.Grade = grade;
+		this.age = age;
 	}
 
-	@Override
-	public String toString() {
-		return ("이름: " + Name + " "+"나이: " + Age + " " + "성적: " + Grade);
+	public int getGrade() {
+		return grade;
 	}
-	
-	
-	
+
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
 
 }

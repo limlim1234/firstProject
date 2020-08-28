@@ -1,26 +1,49 @@
 package com.yedam.test;
-
-import java.util.ArrayList;
-import java.util.List;
-
+//과정 
+//과정명, 수강인원(배열, 컬렉션)
+//수강인원 등록
+//전체 학생정보 리스트
 public class Course {
-	public void getBoardList() {
-		List<Board> list = new ArrayList();
-		list.add(new Board("자바과정", 5));
-	}
-	
-	public static void main(String[] args) {
-		List<Student> list = new ArrayList<>();
-		list.add(new Student("홍길동", 10, 90));
-		list.add(new Student("김유신", 20, 80));
-		list.add(new Student("신용권", 15, 85));
-		
-		for(int i = 0; i<list.size(); i++) {
-			System.out.println(list.get(i));
-		}
-		for(String str : list) {
-			System.out.println(str);    
-		}
-	}
+ String Coursename;
+ Student[] s;
+
+ public Course(String coursename, int sNum) {
+
+    super();
+    Coursename = coursename;
+    s = new Student[sNum];
+ }
+
+ public String getCoursename() {
+    return Coursename;
+ }
+
+ public void setCoursename(String coursename) {
+    Coursename = coursename;
+ }
+
+ public Student[] getS() {
+    return s;
+ }
+
+ public void setS(Student[] s) {
+    this.s = s;
+ }
+
+ public void registerStudent(Student sd) {//학생 담기
+    for (int i = 0; i < s.length; i++) {
+       if (s[i] == null) {
+          s[i] = sd;
+          break;
+       }
+    }
+ }
+ 
+ public void showStudent() {
+    for(Student i : s) {
+       if(i!=null)
+       System.out.println(i.getName()+" , "+i.getGrade());
+    }
+ }
 
 }
